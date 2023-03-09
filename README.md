@@ -1,16 +1,34 @@
-# Template para a disciplina de Redes Neurais e Algoritmos Genéticos
+# Redes Neurais e Algoritmos Genéticos
 
-Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
+Este github é destinado à aula de Redes Neurais e Algoritmos Genéticos ministrada pelo professor Daniel Roberto Cassar na Ilum - Escola de Ciência.
 
-Lembretes:
+## Equipe
 
-+ Cada notebook deve ter apenas um experimento
-+ Jamais faça importações utilizando o asterisco. Use espaços de nome ou importe apenas o que for usar no seu experimento
-+ Códigos bem formatados são recomendados. Sugestão: use o formatador black. Ele tem uma versão online disponível em https://black.vercel.app
-+ Sempre use nomes claros e representativos para suas funções, classes, métodos e variáveis
-+ Sempre escreva uma docstring nas suas funções, classes e métodos
-+ Funções simples podem ter doscrings em uma linha. As demais funções devem ter docstrings completas
-+ Comente seu código sempre que julgar necessário, principalmente quando o que estiver sendo executado não for trivial
-+ Todos os notebooks devem funcionar corretamente seguindo a ordem de cima para baixo. Evite rodar células fora da ordem para evitar problemas de continuidade no seu experimento (reordene as células caso seja necessário)
-+ Certifique-se que todas as células do seus notebooks foram executadas! Afinal, como você vai realizar seu experimento sem executar as células?
-+ Reescreva os README do seu repositório para guiar o leitor
+### Alunos
+
+- [@jpab2004](https://github.com/jpab2004)
+
+### Docentes
+
+- [@drcassar](https://github.com/drcassar) - Daniel R. Cassar
+
+## O Projeto
+
+### Objetivo
+
+O projeto tem como principal objetivo armazenar os arquivos resultantes dos projetos realizados dentro e fora da aula referente a disciplina em questão, além de difundir estes para qualquer um que esteja interessado em olhar e estudar os algoritmos e redes estudados dentro de sala, procurando compreender mais sobre cada um destes e ter um melhor domínio perante o conteúdo. O escopo do projeto será direcionado para a aprendizagem para a autilização destas ferramentas dentro do contexto de ciência apresentado pela Ilum - Escola de Ciência.
+
+### Ferramentas
+
+Dentro do github serão encontrados dois principais tipos de arquivos para serem baixados e estudados, arquivos do tipo **.ipynb** referentes aos notebooks feitos em sala em conjunto com o professor e aos arquivos para desenvolvimento das atividades propostas pela disciplina. O outro tipo de arquivo encontrado são arquivos **.py**, estes são arquivos encarregados de armazenar funções, classes e constantes utilizadas em toda extensão do projeto, deste modo, são arquivos complementares aos notebooks principais e auxiliam o código, para manter-lo mais organizado e com mais facil entendimento, além de ser possível a reutilização de códigos em várias etapas do processo.
+
+### Estrutura de Arquivos
+
+O projeto esta dividido em dois grandes tópicos _Algoritmos Genéticos_ e _Redes Neurais_, os dois tendo sua própria pasta para todos os arquivos utilizados. Para informações mais específicas sobre a ideia de cada arquivo individualmente leia cada tópico individual em:
+
++ [Algoritimos Genéticos](/AlgoritmosGeneticos)
++ [RedesNeurais](/RedesNeurais)
+
+### PS
+
+O arquivo [experimento_template.ipynb](/experimento_template.ipynb) é referente à template utilizada para cada um dos arquivos do JupyterLab dentro do projeto.
