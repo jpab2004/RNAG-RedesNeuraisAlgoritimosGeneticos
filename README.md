@@ -16,15 +16,15 @@ Este github é destinado à aula de Redes Neurais e Algoritmos Genéticos minist
 
 ### Objetivo
 
-O projeto tem como principal objetivo armazenar os arquivos resultantes dos experimentos realizados dentro e fora da aula referente a disciplina em questão, além de difundir estes para qualquer um que esteja interessado em olhar e estudar os algoritmos e redes estudados dentro de sala, procurando compreender mais sobre cada um destes e ter um melhor domínio perante o conteúdo. O escopo do projeto será direcionado para a aprendizagem para a autilização destas ferramentas dentro do contexto de ciência apresentado pela Ilum - Escola de Ciência.
+O projeto tem como principal objetivo armazenar os arquivos resultantes dos experimentos realizados dentro e fora das aulas, referentes a disciplina em questão. Além disso, difundir estes conceitos para qualquer um que esteja interessado em olhar e estudar os algoritmos e redes apresentados, procurando compreender mais sobre cada um destes e ter um melhor domínio perante o conteúdo. O escopo dos experimentos será direcionado à aprendizagem e a utilização destas ferramentas dentro do contexto de ciência apresentado pela Ilum - Escola de Ciência.
 
 ### Ferramentas
 
-Dentro do github serão encontrados dois principais tipos de arquivos para serem baixados e estudados, arquivos do tipo **.ipynb** referentes aos notebooks feitos em sala em conjunto com o professor e aos arquivos para desenvolvimento das atividades propostas pela disciplina. O outro tipo de arquivo encontrado são arquivos **.py**, estes são arquivos encarregados de armazenar funções, classes e constantes utilizadas em toda extensão do projeto, deste modo, são arquivos complementares aos notebooks principais e auxiliam o código, para manter-lo mais organizado e com mais facil entendimento, além de ser possível a reutilização de códigos em várias etapas do processo.
+Dentro do github serão encontrados dois principais tipos de arquivos para serem baixados e estudados. Arquivos do tipo **.ipynb** são referentes aos notebooks feitos em sala em conjunto com o professor e aos arquivos para desenvolvimento das atividades propostas pela disciplina. O outro tipo de arquivo encontrado são arquivos **.py**, estes são encarregados de armazenar _funções_, _classes_ e _constantes_ utilizadas em toda extensão do projeto. Deste modo, são arquivos complementares aos notebooks principais e auxiliam o código, mantendo-o mais organizado e mais compreensível, além de ser possível a reutilização de códigos em várias etapas do processo.
 
 ### Estrutura de Arquivos
 
-O projeto esta dividido em dois grandes tópicos _Algoritmos Genéticos_ e _Redes Neurais_, os dois tendo sua própria pasta para todos os arquivos utilizados. Para informações mais específicas sobre a ideia de cada arquivo individualmente leia cada tópico individual em:
+O projeto está dividido em dois grandes tópicos, _Algoritmos Genéticos_ e _Redes Neurais_. Ambos possuem sua própria pasta para todos os arquivos utilizados. Para informações específicas sobre a ideia de cada arquivo, leia cada tópico individual em:
 
 + [Algoritimos Genéticos](/AlgoritmosGeneticos)
 + [RedesNeurais](/RedesNeurais)
