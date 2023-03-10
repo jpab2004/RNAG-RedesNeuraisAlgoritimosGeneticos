@@ -16,7 +16,7 @@ Este github é destinado à aula de Redes Neurais e Algoritmos Genéticos minist
 
 ### Objetivo
 
-O projeto tem como principal objetivo armazenar os arquivos resultantes dos projetos realizados dentro e fora da aula referente a disciplina em questão, além de difundir estes para qualquer um que esteja interessado em olhar e estudar os algoritmos e redes estudados dentro de sala, procurando compreender mais sobre cada um destes e ter um melhor domínio perante o conteúdo. O escopo do projeto será direcionado para a aprendizagem para a autilização destas ferramentas dentro do contexto de ciência apresentado pela Ilum - Escola de Ciência.
+O projeto tem como principal objetivo armazenar os arquivos resultantes dos experimentos realizados dentro e fora da aula referente a disciplina em questão, além de difundir estes para qualquer um que esteja interessado em olhar e estudar os algoritmos e redes estudados dentro de sala, procurando compreender mais sobre cada um destes e ter um melhor domínio perante o conteúdo. O escopo do projeto será direcionado para a aprendizagem para a autilização destas ferramentas dentro do contexto de ciência apresentado pela Ilum - Escola de Ciência.
 
 ### Ferramentas
 
