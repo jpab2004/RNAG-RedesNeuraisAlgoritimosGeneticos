@@ -16,12 +16,12 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento A.02 - busca em grade.ipynb](experimento%20A.02%20-%20busca%20em%20grade.ipynb) - Seguindo a mesma linha de raciocínio do arquivo anterior, este, tem o objetivo de entender o algoritmo de busca em grade, utilizando o mesmo problema proposto no experimento anterior. Tornando-se possível a comparação dos dois métodos e o levantamento de vantagens e desvantagens relacionados a cada um deles.
 
-🚧 experimento A.03 - algoritmo genetico.ipynb - **WIP**
+🚧 experimento A.03 - algoritmo genetico.ipynb - **WIP** 🚧
 
-🚧 experimento A.04 - caixas nao binarias.ipynb - **WIP**
+🚧 experimento A.04 - caixas nao binarias.ipynb - **WIP** 🚧
 
-🚧 experimento A.05 - descobrindo a senha.ipynb - **WIP**
+🚧 experimento A.05 - descobrindo a senha.ipynb - **WIP** 🚧
 
-🚧 experimento A.06 - o caixeiro viajante.ipynb - **WIP**
+🚧 experimento A.06 - o caixeiro viajante.ipynb - **WIP** 🚧
 
-🚧 experimento A.07 - aplicando restricoes.ipynb - **WIP**
+🚧 experimento A.07 - aplicando restricoes.ipynb - **WIP** 🚧
