@@ -20,8 +20,6 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento A.03 - algoritmo genetico.ipynb](experimento%20A.03%20-%20algoritmo%20genetico.ipynb) - Este é um arquivo feito em conjunto com o professor em sala de aula, incorporando uma solução pensada em conjunto com a classe e programada. A resolução esta dentro do arquivo linkado, porém grande parte de seu código esta no arquivo [funcoes.py](funcoes.py).
 
-🚧 experimento A.03 - algoritmo genetico.ipynb - **WIP** 🚧
-
 🚧 experimento A.04 - caixas nao binarias.ipynb - **WIP** 🚧
 
 🚧 experimento A.05 - descobrindo a senha.ipynb - **WIP** 🚧
