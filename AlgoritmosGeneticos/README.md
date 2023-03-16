@@ -16,6 +16,8 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento A.02 - busca em grade.ipynb](experimento%20A.02%20-%20busca%20em%20grade.ipynb) - Seguindo a mesma linha de raciocínio do arquivo anterior, este, tem o objetivo de entender o algoritmo de busca em grade, utilizando o mesmo problema proposto no experimento anterior. Tornando-se possível a comparação dos dois métodos e o levantamento de vantagens e desvantagens relacionados a cada um deles.
 
+✔️ [experimento A.03 - algoritmo genetico - tentativa_pre_aula.ipynb](experimento%20A.03%20-%20algoritmo%20genetico%20-%20tentativa_pre_aula.ipynb) - Este é um arquivo feito antes da aula inicial de algoritmos genéticos e tem como objetivo a resolução do problema de maneira geral, porém sem qualquer conhecimento prévio sobre o formato do algoritmo requisitado. Desta maneira, é tomada a liberdade de fazer um algoritmo próprio e personalizado.
+
 🚧 experimento A.03 - algoritmo genetico.ipynb - **WIP** 🚧
 
 🚧 experimento A.04 - caixas nao binarias.ipynb - **WIP** 🚧
