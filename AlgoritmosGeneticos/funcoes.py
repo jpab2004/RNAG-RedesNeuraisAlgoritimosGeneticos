@@ -64,6 +64,38 @@ def selecao_roleta_max(populacao, fitness):
     return populacao_selecionada
 
 
+def cruzamento_ponto_simples(pai, mae):
+    '''Operador de cruzamento de ponto simples.
+    
+    Args:
+        pai: Uma lista representando um individuo;
+        mae: Uma lista representando um individuo.
+    
+    Returns:
+        Duas listas, sendo que cada uma representa um filho dos pais que foram os argumentos.
+    '''
+    ponto_de_corte = random.randint(1, len(pai) - 1)
+    
+    filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+    
+    return filho1, filho2
+
+
+def mutacao_cb(individuo):
+    '''Realiza a mutação de um gene no problema das caixas binárias.
+    
+    Args:
+        individuo: uma lista representando um individuo no problema das caixas binárias.
+
+    Returns:
+        Um individuo com um gene mutado.
+    '''
+    gene_a_ser_mutado = random.randint(0, len(individuo)-1)
+    individuo[gene_a_ser_mutado] = gene_cb()
+    return individuo
+
+
 def funcao_objetivo_cb(individuo):
     '''Computa a função objetivo no problema das caixas binárias.
     
