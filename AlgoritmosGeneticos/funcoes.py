@@ -1,4 +1,5 @@
 import random
+from textwrap import indent
 
 
 
@@ -403,6 +404,177 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
         fitness.append(funcao_objetivo_senha(individuo, senha_verdadeira))
 
     return fitness
+
+
+
+##############################################################################################################
+#                                 FUNÇÕES - SENHA DE TAMANHO VARIÁVEL                                        #
+##############################################################################################################
+
+
+def gene_sv(letras):
+    '''Sorteia uma letra para o problema da senha de tamanho variável.
+
+    Args:
+        letras: possíveis letras a serem sorteadas.
+    
+    Returns:
+        Uma letra dentro das possíveis a serem sorteadas.
+    '''
+    return random.choice(letras)
+
+
+def individuo_sv(tamanho_max, letras):
+    '''Cria um individuo para o problema da senha variável.
+
+    Args:
+        tamanho_max: tamanho máximo que a senha pode assumir;
+        letras: possíveis letras a serem sorteadas.
+    
+    Returns:
+        Uma lista que representa o individuo.
+    '''
+    tamanho_individuo = random.randint(3,tamanho_max)
+    individuo = []
+    for _ in range(tamanho_individuo):
+        individuo.append(gene_sv(letras))
+    return individuo
+
+
+def pop_inicial_sv(num_individuos, tamanho_max, letras):
+    '''Cria uma população para o problema da senha variável.
+
+    Args:
+        num_individuos: número de individuos da população;
+        tamanho_max: tamanho máximo que a senha pode assumir;
+        letras: possíveis letras a serem sorteadas.
+    
+    Returns:
+        Uma lista que contem todos os individuos.
+    '''
+    pop = []
+    for _ in range(num_individuos):
+        pop.append(individuo_sv(tamanho_max, letras))
+    return pop
+
+
+def obj_sv(individuo, senha_verdadeira, peso_da_penalidade):
+    '''Computa a funcao objetivo de um individuo no problema da senha.
+
+    Args:
+        individiuo: lista contendo as letras da senha;
+        senha_verdadeira: a senha que você está tentando descobrir;
+        peso_da_penalidade: peso para a diferenca de tamanho entre o individuo e a senha real.
+
+    Returns:
+        A "distância" entre a senha proposta e a senha verdadeira. Essa distância é medida letra por letra. Quanto mais distante uma letra for da que deveria ser, maior é essa distância.
+    '''
+    dif = 0
+
+    for letra_ind, letra_ver in zip(individuo, senha_verdadeira):
+        dif += abs(ord(letra_ind) - ord(letra_ver))
+    
+    diferenca_tamanho = abs(len(individuo) - len(senha_verdadeira))
+    dif += peso_da_penalidade * diferenca_tamanho
+
+    return dif
+
+
+def obj_pop_sv(populacao, senha_verdadeira, peso_da_penalidade):
+    '''Computa a funcao objetivo de uma populaçao no problema da senha.
+
+    Args:
+        populacao: lista com todos os individuos da população;
+        senha_verdadeira: a senha que você está tentando descobrir;
+        peso_da_penalidade: peso para a diferenca de tamanho entre o individuo e a senha real.
+    
+    Returns:
+      Lista contendo os valores da métrica de distância entre senhas.
+    '''
+    fitness = []
+
+    for individuo in populacao:
+        fitness.append(obj_sv(individuo, senha_verdadeira, peso_da_penalidade))
+
+    return fitness
+
+
+def selecao_torneio_senha_sv(populacao, fitness, tamanho_torneio):
+    '''Faz a seleção de uma população usando torneio.
+
+        Nota: da forma que está implementada, só funciona em problemas de minimização.
+    
+    Args:
+        populacao: população do problema;
+        fitness: lista com os valores de fitness de cada individuo;
+        tamanho_torneio: quantidade de invidiuos que batalham entre si.
+
+    Returns:
+        Individuos selecionados. Lista com os individuos selecionados com mesmo tamanho do argumento 'populacao'.
+    '''
+    selecionados = []
+
+    par_populacao_fitness = list(zip(populacao, fitness))
+
+    for _ in range(len(populacao)):
+        combatentes = random.sample(par_populacao_fitness, tamanho_torneio)
+
+        melhor_fit = float('inf')
+
+        for individuo, fit in combatentes:
+            if fit < melhor_fit:
+                selecionado = individuo
+                melhor_fit = fit
+        
+        selecionados.append(selecionado)
+    
+    return selecionados
+
+
+def cruzamento_ponto_simples_sv(pai, mae):
+    '''Operador de cruzamento de ponto simples para o problema da senha variável.
+    
+    Args:
+        pai: Uma lista representando um individuo;
+        mae: Uma lista representando um individuo.
+    
+    Returns:
+        Duas listas, sendo que cada uma representa um filho dos pais que foram os argumentos.
+    '''
+    if len(pai) < len(mae):
+        ponto_de_corte = random.randint(1, len(pai) - 1)
+    else:
+        ponto_de_corte = random.randint(1, len(mae) - 1)
+    
+    filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+    
+    return filho1, filho2
+
+
+def mutacao_senha_sv(individuo, letras, tamanho_max):
+    '''Realiza a mutação de um gene no problema da senha variável.
+
+    Args:
+        individuo: uma lista representado um individuo no problema da senha;
+        letras: letras possíveis de serem sorteadas;
+        tamanho_max: tamanho máximo que a senha pode assumir.
+
+    Return:
+        Um individuo (senha variável) com um gene mutado.
+    '''
+    if random.random() < .5:
+        gene = random.randint(0, len(individuo) - 1)
+        individuo[gene] = gene_sv(letras)
+        return individuo
+    else:
+        novo_tamanho = random.randint(3, tamanho_max)
+        if novo_tamanho < len(individuo):
+            return individuo[:novo_tamanho]
+        else:
+            for _ in range(novo_tamanho - len(individuo)):
+                individuo.append(gene_sv(letras))
+            return individuo
 
 
 
