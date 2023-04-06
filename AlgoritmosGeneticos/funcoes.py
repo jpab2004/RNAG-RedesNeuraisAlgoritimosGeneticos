@@ -1,5 +1,5 @@
 import random
-from textwrap import indent
+from collections import deque
 
 
 
@@ -322,7 +322,9 @@ def individuo_cv(cidades):
       Retorna uma lista de nomes de cidades formando um caminho onde visitamos
       cada cidade apenas uma vez.
     """
-    pass
+    nomes = list(cidades.keys())
+    random.shuffle(nomes)
+    return nomes
 
 
 def populacao_inicial_cv(tamanho, cidades):
@@ -351,7 +353,12 @@ def mutacao_de_troca(individuo):
       O indivíduo recebido como argumento, porém com dois dos seus genes
       trocados de posição.
     """
-    pass
+    indices = list(range(len(individuo)))
+    indice1, indice2 = random.sample(indices, k=2)
+
+    individuo[indice1], individuo[indice2] = individuo[indice2], individuo[indice1]
+
+    return individuo
 
 
 def funcao_objetivo_cv(individuo, cidades):
@@ -370,8 +377,15 @@ def funcao_objetivo_cv(individuo, cidades):
 
     distancia = 0
 
-    # preencher o código
+    individuo_copy = deque(individuo)
+    individuo_copy.rotate(-1)
 
+    for ini, che in zip(individuo, individuo_copy):
+        inicio = cidades[ini]
+        chegada = cidades[che]
+
+        distancia += distancia_entre_dois_pontos(inicio, chegada)
+    
     return distancia
 
 
@@ -490,7 +504,20 @@ def cruzamento_ordenado(pai, mae):
       argumentos. Estas listas mantém os genes originais dos pais, porém altera
       a ordem deles
     """
-    pass
+    corte1 = random.randint(0, len(pai) - 2)
+    corte2 = random.randint(corte1 + 1, len(pai) - 1)
+
+    filho1 = pai[corte1:corte2]
+    for gene in mae:
+        if gene not in filho1:
+            filho1.append(gene)
+
+    filho2 = mae[corte1:corte2]
+    for gene in pai:
+        if gene not in filho2:
+            filho2.append(gene)
+
+    return filho1, filho2
 
 
 
