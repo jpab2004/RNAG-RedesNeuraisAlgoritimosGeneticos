@@ -411,6 +411,64 @@ def funcao_objetivo_pop_cv(populacao, cidades):
 
 
 ##############################################################################################################
+#                                             PROBLEMA DA MOCHILA                                            #
+##############################################################################################################
+
+
+
+def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
+    """Computa a funcao objetivo de um candidato no problema da mochila.
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Valor total dos itens inseridos na mochila considerando a penalidade para
+      quando o peso excede o limite.
+    """
+    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
+    
+    if peso_mochila > limite:
+        return 0.01
+    else:
+        return valor_mochila
+
+
+def funcao_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
+    """Computa a fun. objetivo de uma populacao no problema da mochila
+    Args:
+      populacao:
+        Lista com todos os individuos da população
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+
+    resultado = []
+    for individuo in populacao:
+        resultado.append(
+            funcao_objetivo_mochila(
+                individuo, objetos, limite, ordem_dos_nomes
+            )
+        )
+
+    return resultado
+
+
+
+##############################################################################################################
 #                                                  SELEÇÃO                                                   #
 ##############################################################################################################
 
@@ -565,9 +623,37 @@ def cria_cidades(n):
     return cidades
 
 
+def computa_mochila(individuo, objetos, ordem_dos_nomes):
+    """Computa o valor total e peso total de uma mochila
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      valor_total: valor total dos itens da mochila em unidades de dinheiros.
+      peso_total: peso total dos itens da mochila em unidades de massa.
+    """
+    valor_total = 0
+    peso_total = 0
+
+    for pegou_o_itenm_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
+        if pegou_o_itenm_ou_nao == 1:
+            valor_do_item = objetos[nome_do_item]['valor']
+            peso_do_item = objetos[nome_do_item]['peso']
+
+            valor_total += valor_do_item
+            peso_total += peso_do_item
+
+    return valor_total, peso_total
+
+
 
 ##############################################################################################################
-#                                 FUNÇÕES - SENHA DE TAMANHO VARIÁVEL                                        #
+#                                       SENHA DE TAMANHO VARIÁVEL                                            #
 ##############################################################################################################
 
 
