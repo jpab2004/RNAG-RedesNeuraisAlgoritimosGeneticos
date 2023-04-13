@@ -22,8 +22,10 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento A.04 - caixas nao binarias.ipynb](experimento%20A.04%20-%20caixas%20nao-binarias.ipynb) - Neste notebook é feito um algoritmo capaz de resolver um problema parecido com o anterior, consiste no problema das caixas não binárias, o conceito é muito parecido do anterior, porém, desta vez as caixas podem assumir valores de 0 até um valor especificado pelo problema. ✔️
 
-✔️ experimento A.05 - descobrindo a senha.ipynb - **WIP** ✔️
+✔️ [experimento A.05 - descobrindo a senha.ipynb](experimento%20A.05%20-%20descobrindo%20a%20senha.ipynb) - Este notebook possui um problema mais complexo que os outros 2 anterios, agora, temos uma senha que deve ser encontrada por um algoritmo genético, para isso, o algoritimo deve criar uma população bem diferente das anteriores. ✔️
 
-✔️ experimento A.06 - o caixeiro viajante.ipynb - **WIP** ✔️
+✔️ [experimento A.06 - caixeiro viajante.ipynb](experimento%20A.06%20-%20o%20caixeiro%20viajante.ipynb) - Neste notebook, exploramos um problema muito conhecido, se trata de um problema onde devemos encontrar o menor caminho possível para passar por determinadas cidades sem que se repita a passagem por uma. ✔️
 
-✔️ experimento A.07 - aplicando restricoes.ipynb - **WIP** ✔️
+✔️ [experimento A.07 - aplicando restricoes.ipynb](experimento%20A.07%20-%20aplicando%20restricoes.ipynb) - O último experimento feito em sala possui uma limitação, nele, deveremos maximizar uma quantia monetária que podemos carregar em uma mochila, porém, esta mochila possui um limite de carga, sendo necessária sua consideração para resolução do problema. ✔️
+
+✔️ [experimento G.01 - senha de tamanho variavel.ipynb](experimento%20GA.01%20-%20senha%20de%20tamanho%20variavel.ipynb) - Este é um experimento proposto para ser resolvido a par da aula. Podendo ser considerado muito parecido com o problema da senha resolvido anteriormente, este experimento possui uma diferença essencial, onde não se sabe inicialmente o tamanho da senha, desta forma, o algoritmo deve descobrir o tamanho da senha de maneira dinâmica. ✔️
