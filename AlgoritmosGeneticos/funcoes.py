@@ -522,6 +522,38 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio):
     return selecionados
 
 
+def selecao_torneio_max(populacao, fitness, tamanho_torneio):
+    '''Faz a seleção de uma população usando torneio.
+
+        Nota: da forma que está implementada, só funciona em problemas de maximização.
+    
+    Args:
+        populacao: população do problema;
+        fitness: lista com os valores de fitness de cada individuo;
+        tamanho_torneio: quantidade de invidiuos que batalham entre si.
+
+    Returns:
+        Individuos selecionados. Lista com os individuos selecionados com mesmo tamanho do argumento 'populacao'.
+    '''
+    selecionados = []
+
+    par_populacao_fitness = list(zip(populacao, fitness))
+
+    for _ in range(len(populacao)):
+        combatentes = random.sample(par_populacao_fitness, tamanho_torneio)
+
+        melhor_fit = -float('inf')
+
+        for individuo, fit in combatentes:
+            if fit > melhor_fit:
+                selecionado = individuo
+                melhor_fit = fit
+        
+        selecionados.append(selecionado)
+    
+    return selecionados
+
+
 
 ##############################################################################################################
 #                                                CRUZAMENTO                                                  #
@@ -820,6 +852,111 @@ def mutacao_senha_sv(individuo, letras, tamanho_max):
             for _ in range(novo_tamanho - len(individuo)):
                 individuo.append(gene_sv(letras))
             return individuo
+
+
+
+
+##############################################################################################################
+#                     CAIXEIRO VIAJANTE COM GASOLINA INFINITA (E SEM CONSCIÊNCIA AMBIENTAL)                  #
+##############################################################################################################
+
+
+
+def individuo_cv_gasolina_inf(cidades):
+    """Sorteia um caminho possível no problema do caixeiro viajante com gasolina infinita.
+    Args:
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Return:
+      Retorna uma lista de nomes de cidades formando um caminho onde visitamos
+      cada cidade apenas uma vez.
+    """
+    nomes = list(cidades.keys())
+    random.shuffle(nomes)
+    return nomes
+
+
+def populacao_inicial_cv_gasolina_inf(tamanho, cidades):
+    """Cria população inicial no problema do caixeiro viajante com gasolina infinita.
+    Args
+      tamanho:
+        Tamanho da população.
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      Lista com todos os indivíduos da população no problema do caixeiro
+      viajante.
+    """
+    populacao = []
+    for _ in range(tamanho):
+        populacao.append(individuo_cv(cidades))
+    return populacao
+
+
+def mutacao_de_troca_gasolina_inf(individuo):
+    """Troca o valor de dois genes para o problema do caixeiro viajante com gasolina infinita.
+    Args:
+      individuo: uma lista representado um individuo.
+    Return:
+      O indivíduo recebido como argumento, porém com dois dos seus genes
+      trocados de posição.
+    """
+    indices = list(range(len(individuo)))
+    indice1, indice2 = random.sample(indices, k=2)
+
+    individuo[indice1], individuo[indice2] = individuo[indice2], individuo[indice1]
+
+    return individuo
+
+
+def funcao_objetivo_cv_gasolina_inf(individuo, cidades):
+    """Computa a funcao objetivo de um individuo no problema do caixeiro viajante com gasolina infinita.
+    Args:
+      individiuo:
+        Lista contendo a ordem das cidades que serão visitadas
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      A distância percorrida pelo caixeiro seguindo o caminho contido no
+      `individuo`. Lembrando que após percorrer todas as cidades em ordem, o
+      caixeiro retorna para a cidade original de onde começou sua viagem.
+    """
+
+    distancia = 0
+
+    individuo_copy = deque(individuo)
+    individuo_copy.rotate(-1)
+
+    for ini, che in zip(individuo, individuo_copy):
+        inicio = cidades[ini]
+        chegada = cidades[che]
+
+        distancia += distancia_entre_dois_pontos(inicio, chegada)
+    
+    return distancia
+
+
+def funcao_objetivo_pop_cv_gasolina_inf(populacao, cidades):
+    """Computa a funcao objetivo de uma população no problema do caixeiro viajante com gasolina infinita.
+    Args:
+      populacao:
+        Lista com todos os inviduos da população
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      Lista contendo a distância percorrida pelo caixeiro para todos os
+      indivíduos da população.
+    """
+
+    resultado = []
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_cv(individuo, cidades))
+
+    return resultado
 
 
 
