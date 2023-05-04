@@ -34,11 +34,11 @@ def plota_grafo(raiz):
 
         # fmt: off
         if hasattr(v, "rotulo") and (hasattr(v, "grad")):
-            label="{ %s | data %.4f | grad %.4f }" % (v.rotulo, v.data, v.grad)
+            label="{ %s | data %.2f | grad %.4f }" % (v.rotulo, v.data, v.grad)
         elif hasattr(v, "rotulo"):
-            label="{ %s | data %.4f }" % (v.rotulo, v.data)
+            label="{ %s | data %.2f }" % (v.rotulo, v.data)
         else:
-            label="{ data %.4f }" % (v.data)
+            label="{ data %.2f }" % (v.data)
         # fmt: on
 
         grafo.node(
