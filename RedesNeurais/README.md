@@ -12,6 +12,14 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [funcoes.py](funcoes.py) - O arquivo contém todas as funções criadas para utilização no projeto, reservando um espaço apenas para funções e suas implementações. Além de, novamente, abordar a reutilização de códigos recorrentes dentro do escopo do projeto.
 
+✔️ [experimento R.01 - derivadas.ipynb](experimento%20R.01%20-%20derivadas.ipynb) - Este é o primeiro experimento da pasta de Redes Neurais da disciplina. Neste notebook é retomado o conceito de derivadas e suas interpretações, além de ser possível vizualizar a derivada de uma simples função quadrática. Este notebook não foi estudado em sala, mas serve como base teórica e principalmente para o entendimento de um conceito muito utilizado no desenvolvimento de Redes Neurais.
+
+✔️ [experimento R.02 - classes.ipynb](experimento%20R.02%20-%20classes.ipynb) - Neste notebook encontramos o primeiro experimento abordado em sala, que consiste no entendimento e na construção de uma classe em `Python`. Este experimento tem o foco de servir como base teórica para a estrutura de dados que são as classes, muito utilizadas em várias áreas da Ciência da Computação para resolver problemas e estrutura-los. Nele, criamos uma simples classe de Materiais que possui funções simples, servindo apenas como aprendizado para o funcionamento de classes.
+
+✔️ [experimento R.03 - construindo um grafo automaticamente.ipynb](experimento%20R.03%20-%20construindo%20um%20grafo%20automaticamente.ipynb) - Este experimento é o primeiro da matéria de Redes Neurais em que abordamos a ideia da construção de uma de maneira direta. No notebook, há o desenvolvimento de uma classe que serve como base para a criação de grafos informativos que mostram a estrutura de uma Rede Neural simples.
+
+✔️ [experimento R.04 - computando gradientes locais.ipynb](experimento%20R.04%20-%20computando%20gradientes%20locais.ipynb) - Utilizando como base a classe criada no experimento anterior, este foca na implementação de gradientes locais e do cálculo de backpropagation para esta classe, aprimorando ainda mais o entendimento de classes e suas aplicações, além de resultar em uma classes capaz de criar um grafo a partir de contas aritiméticas simples e executar o backpropagation para a rede representada pelo grafo.
+
 ## 🚧 **OUTROS AQRUIVOS SERÃO ADICIONADOS** 🚧
 
 Como a disciplina ainda esta em andamento, existem arquivos faltantes dentro da pasta e que posteriormente serão adicionados e implementados.
