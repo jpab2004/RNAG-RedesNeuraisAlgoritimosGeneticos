@@ -20,6 +20,8 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento R.04 - computando gradientes locais.ipynb](experimento%20R.04%20-%20computando%20gradientes%20locais.ipynb) - Utilizando como base a classe criada no experimento anterior, este foca na implementação de gradientes locais e do cálculo de backpropagation para esta classe, aprimorando ainda mais o entendimento de classes e suas aplicações, além de resultar em uma classes capaz de criar um grafo a partir de contas aritiméticas simples e executar o backpropagation para a rede representada pelo grafo.
 
+✔️ [experimento R.05 - finalizando a classe Valor.ipynb](experimento%20R.05%20-%20finalizando%20a%20classe%20Valor.ipynb) - O objetivo deste notebook é aprimorar a classe Valor desenvolvidas nos notebooks anteriores para que esta seja capaz de fazer mais algumas operações aritiméticas básicas avançadas como a adição de números que não fossem da própria classe Valor (números comuns), multiplicação por números comuns, divisão entre duas instancias da classe, negativo do valor da classe entre outros. 
+
 ## 🚧 **OUTROS AQRUIVOS SERÃO ADICIONADOS** 🚧
 
 Como a disciplina ainda esta em andamento, existem arquivos faltantes dentro da pasta e que posteriormente serão adicionados e implementados.
