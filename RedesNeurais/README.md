@@ -20,7 +20,9 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento R.04 - computando gradientes locais.ipynb](experimento%20R.04%20-%20computando%20gradientes%20locais.ipynb) - Utilizando como base a classe criada no experimento anterior, este foca na implementação de gradientes locais e do cálculo de backpropagation para esta classe, aprimorando ainda mais o entendimento de classes e suas aplicações, além de resultar em uma classes capaz de criar um grafo a partir de contas aritiméticas simples e executar o backpropagation para a rede representada pelo grafo.
 
-✔️ [experimento R.05 - finalizando a classe Valor.ipynb](experimento%20R.05%20-%20finalizando%20a%20classe%20Valor.ipynb) - O objetivo deste notebook é aprimorar a classe Valor desenvolvidas nos notebooks anteriores para que esta seja capaz de fazer mais algumas operações aritiméticas básicas avançadas como a adição de números que não fossem da própria classe Valor (números comuns), multiplicação por números comuns, divisão entre duas instancias da classe, negativo do valor da classe entre outros. 
+✔️ [experimento R.05 - finalizando a classe Valor.ipynb](experimento%20R.05%20-%20finalizando%20a%20classe%20Valor.ipynb) - Neste notebook aprimoramos a classe Valor desenvolvidas nos notebooks anteriores para que esta seja capaz de fazer mais algumas operações aritiméticas básicas avançadas como a adição de números que não fossem da própria classe Valor (números comuns), multiplicação por números comuns, divisão entre duas instancias da classe, negativo do valor da classe entre outros.
+
+✔️ [experimento R.06 - redes neurais artificiais.ipynb](experimento%20R.06%20-%20redes%20neurais%20artificiais.ipynb) - Neste notebook, estamos finalmente chegando ao ponto de criar nossas Redes Neurais de maneira simples e computacional. Nele, criamos três classes novas que são capazes de criar Neuronios, Camadas e uma Rede Neural em si. Este notebook conclui a criação de nossa Rede, sendo o próximo passo a implementação de uma forma de treiná-la.
 
 ## 🚧 **OUTROS AQRUIVOS SERÃO ADICIONADOS** 🚧
 
