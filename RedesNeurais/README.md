@@ -24,6 +24,6 @@ Abaixo, encontra-se uma lista com todos os arquivos presentes e futuramente plan
 
 ✔️ [experimento R.06 - redes neurais artificiais.ipynb](experimento%20R.06%20-%20redes%20neurais%20artificiais.ipynb) - Neste notebook, estamos finalmente chegando ao ponto de criar nossas Redes Neurais de maneira simples e computacional. Nele, criamos três classes novas que são capazes de criar Neuronios, Camadas e uma Rede Neural em si. Este notebook conclui a criação de nossa Rede, sendo o próximo passo a implementação de uma forma de treiná-la.
 
-## 🚧 **OUTROS AQRUIVOS SERÃO ADICIONADOS** 🚧
+✔️ [experimento R.07 - treinando uma rede neural.ipynb](experimento%20R.07%20-%20treinando%20uma%20rede%20neural.ipynb) - Neste notebook, utilizamos as classes criadas no notebook anterior para criar uma rede neural, porém, desta vez, além de sua criação, também fazemos seu treinamento para dados arbitrários a fim de entender sobre este processo de treino de uma rede neural e como este afeta a precisão da rede em geral.
 
-Como a disciplina ainda esta em andamento, existem arquivos faltantes dentro da pasta e que posteriormente serão adicionados e implementados.
+✔️ [experimento R.08 - treinando uma rede neural com pytorch.ipynb](experimento%20R.08%20-%20treinando%20uma%20rede%20neural%20com%20pytorch.ipynb) - Este é o último experimento realizado de Redes Neurais e afims, seu objetivo é a apresentação e utilização da biblioteca pytorch para criação de redes neurais. Neste caso, criamos uma rede relativamente simples e a utilizamos para tentar prever o preço de um dataset de diamantes sabendo 6 de seus dados.
